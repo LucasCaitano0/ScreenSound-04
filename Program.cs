@@ -7,11 +7,15 @@ using (HttpClient client = new HttpClient())
     {
         string resposta = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
         string pais = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/Paises.json");
-        
+        string filme = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/TopMovies.json");
+
         var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
         var paises = JsonSerializer.Deserialize<List<Pais>>(pais)!;
+        var filmes = JsonSerializer.Deserialize<List<Filme>>(filme)!;
 
-        paises[0].ExibiDetalhesDoPais();
+        filmes[0].ExibirDetalhesDoFilme();
+
+        //paises[0].ExibiDetalhesDoPais();
 
         //foreach (var musica in musicas)
         //{
