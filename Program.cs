@@ -15,7 +15,8 @@ using (HttpClient client = new HttpClient())
         //var filmes = JsonSerializer.Deserialize<List<Filme>>(filme)!;
         // LinqFilter.FiltrarTodosOsGenerosMusicais(musicas);
         // LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
-        LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "pop");
+        // LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "pop");
+        LinqFilter.filtrarMusicasDeUmArstista(musicas, "Post Malone");
         //filmes[0].ExibirDetalhesDoFilme();
 
         //paises[0].ExibiDetalhesDoPais();
