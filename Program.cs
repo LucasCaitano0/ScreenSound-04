@@ -11,6 +11,7 @@ using (HttpClient client = new HttpClient())
         //string filme = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/TopMovies.json");
 
         var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
+        musicas[0].ExibiDetalhesDaMusica();
         //var paises = JsonSerializer.Deserialize<List<Pais>>(pais)!;
         //var filmes = JsonSerializer.Deserialize<List<Filme>>(filme)!;
         // LinqFilter.FiltrarTodosOsGenerosMusicais(musicas);
@@ -27,16 +28,16 @@ using (HttpClient client = new HttpClient())
         //    Console.WriteLine("--------------------");
         //}
 
-        var musicasPreferidas = new MusicasPreferidas("Lucas");
-        musicasPreferidas.AdicionarMusicasFavoritas(musicas[0]);
-        musicasPreferidas.AdicionarMusicasFavoritas(musicas[1]);
-        musicasPreferidas.AdicionarMusicasFavoritas(musicas[2]);
-        musicasPreferidas.AdicionarMusicasFavoritas(musicas[3]);
-        musicasPreferidas.AdicionarMusicasFavoritas(musicas[4]);
+        //var musicasPreferidas = new MusicasPreferidas("Lucas");
+        //musicasPreferidas.AdicionarMusicasFavoritas(musicas[0]);
+        //musicasPreferidas.AdicionarMusicasFavoritas(musicas[1]);
+        //musicasPreferidas.AdicionarMusicasFavoritas(musicas[2]);
+        //musicasPreferidas.AdicionarMusicasFavoritas(musicas[3]);
+        //musicasPreferidas.AdicionarMusicasFavoritas(musicas[4]);
 
-        musicasPreferidas.ExibirMusicasFavoritas();
+        //musicasPreferidas.ExibirMusicasFavoritas();
 
-        musicasPreferidas.GerarArquivoJson();
+        //musicasPreferidas.GerarArquivoJson();
 
     }
     catch (Exception ex)
